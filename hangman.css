@@ -1,0 +1,636 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cls-1,
+.cls-18,
+.cls-19,
+.cls-23,
+.cls-4 {
+  fill: none;
+}
+.cls-1 {
+  stroke: #b17f4a;
+}
+.cls-1,
+.cls-10,
+.cls-11,
+.cls-14,
+.cls-18,
+.cls-19,
+.cls-2,
+.cls-20,
+.cls-21,
+.cls-23,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9 {
+  stroke-miterlimit: 10;
+}
+.cls-1,
+.cls-23 {
+  stroke-width: 4px;
+}
+.cls-2 {
+  fill: #27348b;
+  stroke: #312783;
+}
+.cls-3 {
+  fill: #539e2b;
+}
+.cls-4 {
+  stroke: #432918;
+  stroke-width: 8px;
+}
+.cls-5 {
+  fill: #3c2512;
+}
+.cls-10,
+.cls-11,
+.cls-14,
+.cls-18,
+.cls-19,
+.cls-20,
+.cls-21,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9 {
+  stroke: #1d1d1b;
+}
+.cls-6 {
+  fill: #023531;
+}
+.cls-7 {
+  fill: #025f60;
+}
+.cls-8 {
+  fill: #5d111c;
+}
+.cls-9 {
+  fill: #053e22;
+}
+.cls-10 {
+  fill: #6a4e12;
+}
+.cls-11 {
+  fill: #2d1434;
+}
+.cls-12 {
+  fill: #c6c6c6;
+}
+.cls-13,
+.cls-20 {
+  fill: #1d1d1b;
+}
+.cls-14 {
+  fill: #fff;
+}
+.cls-15 {
+  fill: #dadada;
+}
+.cls-16 {
+  fill: #575756;
+}
+.cls-17 {
+  fill: #432918;
+}
+.cls-18,
+.cls-20,
+.cls-21 {
+  stroke-width: 3px;
+}
+.cls-19 {
+  stroke-width: 2px;
+}
+.cls-21 {
+  fill: #e30613;
+}
+.cls-22 {
+  fill: #878787;
+}
+.cls-23 {
+  stroke: #936037;
+}
+svg {
+  width: 30%;
+}
+
+#right-tear1,
+#right-tear2,
+#right-tear3,
+#left-tear1,
+#left-tear2,
+#left-tear3,
+#left-tear4,
+#happy-mouth,
+#sad-mouth,
+#line-mouth,
+#o-mouth,
+#box4 {
+  visibility: hidden;
+}
+
+#head {
+  fill: #ffffff;
+}
+
+/* GAMESTART */
+
+/* #line-mouth{
+visibility: visible;
+}
+
+#right-eyeball,
+#left-eyeball{
+animation: look 6s infinite alternate;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+@keyframes look{
+0%{
+transform: translateY(-1.5px);
+}
+
+50%{
+transform: translateY(0px);
+}
+
+60%{
+    transform: translateY(-1.5);
+}
+
+75%{
+transform: translateY(-1.5px);
+}
+
+100%{
+transform: translate(0px);
+}}
+
+#left-arm{
+animation: moveleftarm 3s infinite alternate;
+transform-origin: right;
+transform-box: fill-box;
+}
+
+@keyframes moveleftarm{
+
+from{
+    transform: rotate(0deg);
+}
+
+to{
+transform: rotate(10deg);
+}
+
+}
+
+#right-arm{
+    animation: moverightarm 2s infinite alternate;
+    transform-origin: left center;
+    transform-box: fill-box;
+    }
+    
+    @keyframes moverightarm{
+    
+    from{
+        transform: rotate(0deg);
+    }
+    
+    to{
+    transform: rotate(15deg);
+    }
+    } */
+
+/* NERVOUS = TRÆDER I KRAFT VED FORKERT GÆT */
+
+/* #left-arm {
+  animation: moveleftarm 1s infinite alternate;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes moveleftarm {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+#right-arm {
+  animation: moverightarm 2s infinite alternate;
+  transform-origin: left center;
+  transform-box: fill-box;
+}
+
+@keyframes moverightarm {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+#right-eyeball,
+#left-eyeball {
+  animation: look1 1s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes look1 {
+  0% {
+    transform: translateY(-1.5px);
+  }
+
+  50% {
+    transform: translate(2px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
+
+#o-mouth {
+  visibility: visible;
+  animation: nervous 1s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes nervous {
+  0% {
+    transform: scale(0.5) translate(0px);
+  }
+
+  50% {
+    transform: scale(1) translate(3px);
+  }
+
+  100% {
+    transform: scale(1) translate(0px);
+  }
+}
+
+#right-eyebrow,
+#left-eyebrow {
+  animation: brow 1s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes brow {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1.5px);
+  }
+} */
+
+/* FALLING-BOXES */
+
+/* ØVERSTE HØJRE KASSE FORSVINDER START: */
+
+#box7 {
+  animation: fall7 4s forwards;
+  transform-box: fill-box;
+}
+
+@keyframes fall7 {
+  0% {
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(-40px) rotateZ(-10deg) scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* #left-leg {
+  animation: aw 1s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes aw {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: skewY(10deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+} */
+
+/* ØVERSTE VENSTRE KASSE FORSVINDER SLUT: */
+
+/* ØVERSTE HØJRE KASSE FORSVINDER START: */
+
+#box6 {
+  animation: fall6 4s forwards;
+  transform-box: fill-box;
+}
+
+@keyframes fall6 {
+  0% {
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(40px) rotateZ(10deg) scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* HØJRE BEN */
+
+/* #right-leg {
+  animation: aw1 1s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes aw1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: skewY(-10deg);
+  }
+
+  100% {
+    transform: rotate(-20deg);
+  }
+} */
+
+/* REBBET BLIVER LÆNGERE 1. GANG */
+
+#rope {
+  animation: longer 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes longer {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(2);
+  }
+}
+
+/* HANGMAN FALDER LÆNGERE NED 1.GANG */
+#hangman {
+  animation: lower 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes lower {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(25px);
+  }
+}
+
+/* VENSTRE BEN */
+
+/* #left-leg {
+  animation: aw 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes aw {
+  0% {
+    transform: skewY(0deg);
+  }
+
+  50% {
+    transform: skewY(-40deg);
+  }
+
+  100% {
+    transform: skewY(-40deg) translateY(0);
+  }
+} */
+
+/* #right-leg {
+  animation: aw1 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes aw1 {
+  0% {
+    transform: skewY(0deg);
+  }
+
+  50% {
+    transform: skewY(40deg);
+  }
+
+  100% {
+    transform: skewY(40deg) translateY(0);
+  }
+} */
+
+/* ØVERSTE HØJRE KASSE FORVINDER: SLUT: */
+
+/* BOX5 FORSVINDER */
+
+#box5 {
+  animation: fall6 1s forwards;
+  transform-box: fill-box;
+}
+
+/* #left-leg {
+  animation: legs 1s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes legs {
+  form {
+    transform: rotate(0deg) skewY(0deg);
+  }
+  to {
+    transform: rotate(10deg) skewY(-30deg);
+  }
+} */
+
+/* BOX3(LILLA) FORSVINDER */
+
+#box3 {
+  animation: fall6 1s forwards;
+  transform-box: fill-box;
+}
+
+/* BOX6 FORSVINDER */
+
+/* #hangman{
+    animation: sway 4s infinite alternate ;
+    transform-box: fill-box;
+    transform-origin: top;
+    }
+
+    @keyframes sway{
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+    transform: rotate(10deg);
+    }
+
+    } */
+
+/* HANGMAN FALDER LÆNGERE NED 2. GANG */
+
+#hangman {
+  animation: lower 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes lower {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+
+#box1 {
+  animation: fall6 1s forwards;
+  transform-box: fill-box;
+}
+
+#box2 {
+  animation: fall6 1s forwards;
+  transform-box: fill-box;
+}
+
+/* DEAD */
+
+#hangman {
+  animation: lower 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes lower {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(60px);
+  }
+}
+
+#box1 {
+  animation: fall6 1s forwards;
+  transform-box: fill-box;
+}
+
+#box2 {
+  animation: fall6 1s forwards;
+  transform-box: fill-box;
+}
+
+#line-mouth {
+  visibility: visible;
+  z-index: 3;
+}
+
+#left-leg {
+  animation: legs 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes legs {
+  from {
+    transform: skewY(0deg);
+  }
+  to {
+    transform: skewY(-40deg);
+  }
+}
+
+#right-leg {
+  animation: legs1 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes legs1 {
+  from {
+    transform: skewY(0deg);
+  }
+  to {
+    transform: skewY(40deg);
+  }
+}
+
+#left-arm {
+  animation: dead-arm 2s forwards;
+  transform-origin: 50px 0px;
+  transform-box: fill-box;
+}
+
+@keyframes dead-arm {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-35deg);
+  }
+}
+
+#right-arm {
+  animation: dead-arm1 2s forwards;
+  transform-origin: 2px -1px;
+  transform-box: fill-box;
+}
+
+@keyframes dead-arm1 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(30deg);
+  }
+}

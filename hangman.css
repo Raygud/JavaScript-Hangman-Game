@@ -227,7 +227,7 @@ svg {
 
 /* <-------------------------------------NERVOUS LOOK-------------------------------------------> */
 
-#line-mouth {
+/* #line-mouth {
   visibility: hidden;
 }
 #left-arm {
@@ -318,13 +318,13 @@ svg {
   to {
     transform: translateY(-1.5px);
   }
-}
+} */
 
 /* <-----------------------------------FALLING-BOXES----------------------------------> */
 
 /* <-----------------------------LYSEBRUN KASSE FORSVINDER-----------------------------> */
 
-#box7 {
+/* #box7 {
   animation: fall7 4s forwards;
   transform-box: fill-box;
 }
@@ -361,11 +361,11 @@ svg {
   100% {
     transform: rotate(20deg);
   }
-}
+} */
 
 /* <--------------------------------MØRKEBRUN KASSE FORSVINDER----------------------------> */
 
-#box6 {
+/* #box6 {
   animation: fall6 4s forwards;
   transform-box: fill-box;
 }
@@ -417,13 +417,17 @@ svg {
   100% {
     transform: skewY(-40deg) translateY(0);
   }
-}
+} */
 
 /* <-----------------------------------------MØRKE-TURKIS KASSE FORSVINDER-----------------------------------------> */
 
-#box5 {
+/* #box5 {
   animation: fall6 3s forwards;
   transform-box: fill-box;
+}
+
+#head {
+  fill: rgb(255, 237, 236);
 }
 
 @keyframes fall6 {
@@ -453,9 +457,13 @@ svg {
   to {
     transform: rotate(10deg) skewY(-10deg);
   }
-}
+} */
 
 /*<-----------------------------------------LILLA KASSE FORSVINDER---------------------------------> */
+
+/* #head {
+  fill: rgb(255, 217, 215);
+}
 
 #left-leg {
   animation: none;
@@ -523,9 +531,13 @@ svg {
   to {
     transform: skewY(40deg);
   }
-}
+} */
 
 /* <------------------------------------------MØRKEBRUN FORSVINDER---------------------------------------> */
+
+/* #head {
+  fill: rgb(244, 197, 247);
+}
 
 #hangman {
   animation: lower 1s forwards;
@@ -565,9 +577,13 @@ svg {
   100% {
     transform: rotate(20deg);
   }
-}
+} */
 
 /* <-----------------------------------------------DEAD---------------------------------------> */
+/* #head {
+  fill: rgb(199, 225, 255);
+}
+
 #box2 {
   animation: fall6 1s forwards;
   transform-box: fill-box;
@@ -687,4 +703,4 @@ svg {
   to {
     transform: rotate(30deg);
   }
-}
+} */

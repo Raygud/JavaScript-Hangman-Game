@@ -133,6 +133,8 @@ svg {
 #sad-mouth,
 #line-mouth,
 #o-mouth,
+#dead-eye-left,
+#dead-eye-right,
 #box4 {
   visibility: hidden;
 }
@@ -143,76 +145,77 @@ svg {
 
 /* GAMESTART */
 
-/* #line-mouth{
-visibility: visible;
+/* #line-mouth {
+  visibility: visible;
 }
 
 #right-eyeball,
-#left-eyeball{
-animation: look 6s infinite alternate;
-transform-origin: center;
-transform-box: fill-box;
+#left-eyeball {
+  animation: look 6s infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
-@keyframes look{
-0%{
-transform: translateY(-1.5px);
-}
+@keyframes look {
+  0% {
+    transform: translateY(-1.5px);
+  }
 
-50%{
-transform: translateY(0px);
-}
+  50% {
+    transform: translateY(0px);
+  }
 
-60%{
+  60% {
     transform: translateY(-1.5);
+  }
+
+  75% {
+    transform: translateY(-1.5px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
 }
 
-75%{
-transform: translateY(-1.5px);
+#left-arm {
+  animation: moveleftarm 3s infinite alternate;
+  transform-origin: right;
+  transform-box: fill-box;
 }
 
-100%{
-transform: translate(0px);
-}}
-
-#left-arm{
-animation: moveleftarm 3s infinite alternate;
-transform-origin: right;
-transform-box: fill-box;
-}
-
-@keyframes moveleftarm{
-
-from{
+@keyframes moveleftarm {
+  from {
     transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
 }
 
-to{
-transform: rotate(10deg);
+#right-arm {
+  animation: moverightarm 2s infinite alternate;
+  transform-origin: left center;
+  transform-box: fill-box;
 }
 
-}
+@keyframes moverightarm {
+  from {
+    transform: rotate(0deg);
+  }
 
-#right-arm{
-    animation: moverightarm 2s infinite alternate;
-    transform-origin: left center;
-    transform-box: fill-box;
-    }
-    
-    @keyframes moverightarm{
-    
-    from{
-        transform: rotate(0deg);
-    }
-    
-    to{
+  to {
     transform: rotate(15deg);
-    }
-    } */
+  }
+} */
 
 /* NERVOUS = TRÆDER I KRAFT VED FORKERT GÆT */
 
-/* #left-arm {
+/* #line-mouth {
+  visibility: hidden;
+}
+#left-arm {
   animation: moveleftarm 1s infinite alternate;
   transform-origin: right;
   transform-box: fill-box;
@@ -325,7 +328,7 @@ transform: rotate(10deg);
   }
 }
 
-/* #left-leg {
+#left-leg {
   animation: aw 1s infinite alternate;
   transform-box: fill-box;
   transform-origin: top;
@@ -343,7 +346,7 @@ transform: rotate(10deg);
   100% {
     transform: rotate(20deg);
   }
-} */
+}
 
 /* ØVERSTE VENSTRE KASSE FORSVINDER SLUT: */
 
@@ -474,7 +477,7 @@ transform: rotate(10deg);
   transform-box: fill-box;
 }
 
-/* #left-leg {
+#left-leg {
   animation: legs 1s infinite alternate;
   transform-box: fill-box;
   transform-origin: top;
@@ -487,7 +490,7 @@ transform: rotate(10deg);
   to {
     transform: rotate(10deg) skewY(-30deg);
   }
-} */
+}
 
 /* BOX3(LILLA) FORSVINDER */
 
@@ -498,21 +501,20 @@ transform: rotate(10deg);
 
 /* BOX6 FORSVINDER */
 
-/* #hangman{
-    animation: sway 4s infinite alternate ;
-    transform-box: fill-box;
-    transform-origin: top;
-    }
+#hangman {
+  animation: sway 4s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: top;
+}
 
-    @keyframes sway{
-    from{
+@keyframes sway {
+  from {
     transform: rotate(0deg);
-    }
-    to{
+  }
+  to {
     transform: rotate(10deg);
-    }
-
-    } */
+  }
+}
 
 /* HANGMAN FALDER LÆNGERE NED 2. GANG */
 
@@ -542,6 +544,18 @@ transform: rotate(10deg);
 }
 
 /* DEAD */
+
+#right-eye,
+#left-eye,
+#right-eyebrow,
+#left-eyebrow {
+  visibility: hidden;
+}
+
+#dead-eye-left,
+#dead-eye-right {
+  visibility: visible;
+}
 
 #hangman {
   animation: lower 1s forwards;

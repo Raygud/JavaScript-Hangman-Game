@@ -131,7 +131,6 @@ svg {
 #left-tear4,
 #happy-mouth,
 #sad-mouth,
-#line-mouth,
 #o-mouth,
 #dead-eye-left,
 #dead-eye-right,
@@ -143,11 +142,26 @@ svg {
   fill: #ffffff;
 }
 
+/* <-----------------------------------------REB-----------------------------------------> */
+
+#rope {
+  animation: longer 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes longer {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(2);
+  }
+}
+
 /* GAMESTART */
 
-/* #line-mouth {
-  visibility: visible;
-}
+/* <-------------------------------------EYEBALLS-------------------------------------------> */
 
 #right-eyeball,
 #left-eyeball {
@@ -178,6 +192,7 @@ svg {
   }
 }
 
+/* <--------------------------------------------ARMS-SWAY-------------------------------------------- */
 #left-arm {
   animation: moveleftarm 3s infinite alternate;
   transform-origin: right;
@@ -208,11 +223,11 @@ svg {
   to {
     transform: rotate(15deg);
   }
-} */
+}
 
-/* NERVOUS = TRÆDER I KRAFT VED FORKERT GÆT */
+/* <-------------------------------------NERVOUS LOOK-------------------------------------------> */
 
-/* #line-mouth {
+#line-mouth {
   visibility: hidden;
 }
 #left-arm {
@@ -303,11 +318,11 @@ svg {
   to {
     transform: translateY(-1.5px);
   }
-} */
+}
 
-/* FALLING-BOXES */
+/* <-----------------------------------FALLING-BOXES----------------------------------> */
 
-/* ØVERSTE HØJRE KASSE FORSVINDER START: */
+/* <-----------------------------LYSEBRUN KASSE FORSVINDER-----------------------------> */
 
 #box7 {
   animation: fall7 4s forwards;
@@ -348,9 +363,7 @@ svg {
   }
 }
 
-/* ØVERSTE VENSTRE KASSE FORSVINDER SLUT: */
-
-/* ØVERSTE HØJRE KASSE FORSVINDER START: */
+/* <--------------------------------MØRKEBRUN KASSE FORSVINDER----------------------------> */
 
 #box6 {
   animation: fall6 4s forwards;
@@ -371,46 +384,6 @@ svg {
   }
 }
 
-/* HØJRE BEN */
-
-/* #right-leg {
-  animation: aw1 1s infinite alternate;
-  transform-box: fill-box;
-  transform-origin: top;
-}
-
-@keyframes aw1 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  20% {
-    transform: skewY(-10deg);
-  }
-
-  100% {
-    transform: rotate(-20deg);
-  }
-} */
-
-/* REBBET BLIVER LÆNGERE 1. GANG */
-
-#rope {
-  animation: longer 1s forwards;
-  transform-box: fill-box;
-  transform-origin: top;
-}
-
-@keyframes longer {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(2);
-  }
-}
-
-/* HANGMAN FALDER LÆNGERE NED 1.GANG */
 #hangman {
   animation: lower 1s forwards;
   transform-box: fill-box;
@@ -426,9 +399,7 @@ svg {
   }
 }
 
-/* VENSTRE BEN */
-
-/* #left-leg {
+#left-leg {
   animation: aw 1s forwards;
   transform-box: fill-box;
   transform-origin: top;
@@ -446,77 +417,115 @@ svg {
   100% {
     transform: skewY(-40deg) translateY(0);
   }
-} */
-
-/* #right-leg {
-  animation: aw1 1s forwards;
-  transform-box: fill-box;
-  transform-origin: top;
 }
 
-@keyframes aw1 {
+/* <-----------------------------------------MØRKE-TURKIS KASSE FORSVINDER-----------------------------------------> */
+
+#box5 {
+  animation: fall6 3s forwards;
+  transform-box: fill-box;
+}
+
+@keyframes fall6 {
   0% {
-    transform: skewY(0deg);
+    transform: translate(0px);
   }
 
   50% {
-    transform: skewY(40deg);
+    transform: translate(-40px) rotateZ(-10deg) scale(0);
   }
 
   100% {
-    transform: skewY(40deg) translateY(0);
+    transform: scale(0);
   }
-} */
-
-/* ØVERSTE HØJRE KASSE FORVINDER: SLUT: */
-
-/* BOX5 FORSVINDER */
-
-#box5 {
-  animation: fall6 1s forwards;
-  transform-box: fill-box;
 }
 
 #left-leg {
-  animation: legs 1s infinite alternate;
+  animation: leg 1s infinite alternate;
   transform-box: fill-box;
   transform-origin: top;
 }
 
-@keyframes legs {
-  form {
+@keyframes leg {
+  from {
     transform: rotate(0deg) skewY(0deg);
   }
   to {
-    transform: rotate(10deg) skewY(-30deg);
+    transform: rotate(10deg) skewY(-10deg);
   }
 }
 
-/* BOX3(LILLA) FORSVINDER */
+/*<-----------------------------------------LILLA KASSE FORSVINDER---------------------------------> */
+
+#left-leg {
+  animation: none;
+}
 
 #box3 {
   animation: fall6 1s forwards;
   transform-box: fill-box;
 }
 
-/* BOX6 FORSVINDER */
+@keyframes fall6 {
+  0% {
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(-40px) rotateZ(-10deg) scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
 
 #hangman {
-  animation: sway 4s infinite alternate;
+  animation: lower2 1s forwards;
   transform-box: fill-box;
   transform-origin: top;
 }
 
-@keyframes sway {
+@keyframes lower2 {
   from {
-    transform: rotate(0deg);
+    transform: translateY(0);
   }
   to {
-    transform: rotate(10deg);
+    transform: translateY(43px);
   }
 }
 
-/* HANGMAN FALDER LÆNGERE NED 2. GANG */
+#left-leg {
+  animation: toe 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes toe {
+  from {
+    transform: skewY(0);
+  }
+  to {
+    transform: skewY(-40deg);
+  }
+}
+
+#right-leg {
+  animation: toe2 1s forwards;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes toe2 {
+  from {
+    transform: skewY(0);
+  }
+  to {
+    transform: skewY(40deg);
+  }
+}
+
+/* <------------------------------------------MØRKEBRUN FORSVINDER---------------------------------------> */
 
 #hangman {
   animation: lower 1s forwards;
@@ -529,7 +538,7 @@ svg {
     transform: translateY(0);
   }
   to {
-    transform: translateY(50px);
+    transform: translateY(44px);
   }
 }
 
@@ -538,13 +547,28 @@ svg {
   transform-box: fill-box;
 }
 
-#box2 {
-  animation: fall6 1s forwards;
+#left-leg {
+  animation: aw 1s infinite alternate;
   transform-box: fill-box;
+  transform-origin: top;
 }
 
-/* DEAD */
+@keyframes aw {
+  0% {
+    transform: rotate(0deg);
+  }
 
+  20% {
+    transform: skewY(-10deg);
+  }
+
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+/* <-----------------------------------------------DEAD---------------------------------------> */
+#o-mouth,
 #right-eye,
 #left-eye,
 #right-eyebrow,
@@ -558,23 +582,18 @@ svg {
 }
 
 #hangman {
-  animation: lower 1s forwards;
+  animation: lower3 1s forwards;
   transform-box: fill-box;
   transform-origin: top;
 }
 
-@keyframes lower {
+@keyframes lower3 {
   from {
-    transform: translateY(0);
+    transform: translateY(44px);
   }
   to {
-    transform: translateY(60px);
+    transform: translateY(150px);
   }
-}
-
-#box1 {
-  animation: fall6 1s forwards;
-  transform-box: fill-box;
 }
 
 #box2 {
@@ -646,5 +665,21 @@ svg {
 
   to {
     transform: rotate(30deg);
+  }
+}
+
+#hangman {
+  animation: sway 3s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
   }
 }

@@ -568,6 +568,47 @@ svg {
 }
 
 /* <-----------------------------------------------DEAD---------------------------------------> */
+#box2 {
+  animation: fall6 1s forwards;
+  transform-box: fill-box;
+}
+
+#hangman {
+  animation: lower3 4s forwards linear;
+  transform-box: fill-box;
+  transform-origin: top;
+}
+
+@keyframes lower3 {
+  0% {
+    transform: translateY(0px) rotate(0);
+  }
+
+  15% {
+    transform: translateY(50px) rotate(10deg);
+  }
+
+  30% {
+    transform: translateY(50px) rotate(0deg);
+  }
+
+  45% {
+    transform: translateY(50px) rotate(-10deg);
+  }
+
+  60% {
+    transform: translateY(50px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(50px) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(50px) rotate(0deg);
+  }
+}
+
 #o-mouth,
 #right-eye,
 #left-eye,
@@ -579,26 +620,6 @@ svg {
 #dead-eye-left,
 #dead-eye-right {
   visibility: visible;
-}
-
-#hangman {
-  animation: lower3 1s forwards;
-  transform-box: fill-box;
-  transform-origin: top;
-}
-
-@keyframes lower3 {
-  from {
-    transform: translateY(44px);
-  }
-  to {
-    transform: translateY(150px);
-  }
-}
-
-#box2 {
-  animation: fall6 1s forwards;
-  transform-box: fill-box;
 }
 
 #line-mouth {
@@ -665,21 +686,5 @@ svg {
 
   to {
     transform: rotate(30deg);
-  }
-}
-
-#hangman {
-  animation: sway 3s infinite alternate;
-  transform-box: fill-box;
-  transform-origin: top;
-}
-
-@keyframes sway {
-  0% {
-    transform: rotate(5deg);
-  }
-
-  100% {
-    transform: rotate(-5deg);
   }
 }

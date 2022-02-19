@@ -228,8 +228,70 @@ svg {
 /* <-------------------------------------NERVOUS LOOK-------------------------------------------> */
 
 /* #line-mouth {
-  visibility: hidden;
+  animation: fade 1.8s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
 }
+
+@keyframes fade {
+  0% {
+    transform: translateY(-96px) translateX(-40px) scaleX(0.7);
+    opacity: 100%;
+  }
+  50% {
+    transform: translateY(-96px) translateX(-40px) scaleX(0);
+    opacity: 0%;
+  }
+
+  75% {
+    transform: translateY(-96px) translateX(-40px) scaleX(0.3);
+    opacity: 0%;
+  }
+
+  85% {
+    transform: translateY(-96px) translateX(-40px) scaleX(0.5);
+    opacity: 0%;
+  }
+
+  100% {
+    transform: translateY(-96px) translateX(-40px) scaleX(0.7);
+    opacity: 100%;
+  }
+}
+
+#o-mouth {
+  visibility: visible;
+  animation: nervous 2s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes nervous {
+  0% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 90%;
+  }
+  30% {
+    opacity: 90%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  60% {
+    opacity: 90%;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(0);
+  }
+}
+
 #left-arm {
   animation: moveleftarm 1s infinite alternate;
   transform-origin: right;
@@ -283,40 +345,27 @@ svg {
   }
 }
 
-#o-mouth {
-  visibility: visible;
-  animation: nervous 1s forwards;
-  transform-origin: center;
-  transform-box: fill-box;
-}
-
-@keyframes nervous {
-  0% {
-    transform: scale(0.5) translate(0px);
-  }
-
-  50% {
-    transform: scale(1) translate(3px);
-  }
-
-  100% {
-    transform: scale(1) translate(0px);
-  }
-}
-
 #right-eyebrow,
 #left-eyebrow {
-  animation: brow 1s forwards;
+  animation: brow 2s forwards;
   transform-origin: center;
   transform-box: fill-box;
 }
 
 @keyframes brow {
-  from {
+  0% {
     transform: translateY(0);
   }
-  to {
-    transform: translateY(-1.5px);
+  25% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 } */
 
@@ -370,6 +419,10 @@ svg {
   transform-box: fill-box;
 }
 
+#head {
+  fill: rgb(255, 223, 223);
+}
+
 @keyframes fall6 {
   0% {
     transform: translate(0px);
@@ -411,11 +464,11 @@ svg {
   }
 
   50% {
-    transform: skewY(-40deg);
+    transform: skewY(0deg);
   }
 
   100% {
-    transform: skewY(-40deg) translateY(0);
+    transform: skewY(0deg) translateY(0);
   }
 } */
 
@@ -427,7 +480,7 @@ svg {
 }
 
 #head {
-  fill: rgb(255, 237, 236);
+  fill: rgb(255, 217, 215);
 }
 
 @keyframes fall6 {
@@ -462,7 +515,7 @@ svg {
 /*<-----------------------------------------LILLA KASSE FORSVINDER---------------------------------> */
 
 /* #head {
-  fill: rgb(255, 217, 215);
+  fill: rgb(255, 200, 214);
 }
 
 #left-leg {
@@ -536,7 +589,7 @@ svg {
 /* <------------------------------------------MØRKEBRUN FORSVINDER---------------------------------------> */
 
 /* #head {
-  fill: rgb(244, 197, 247);
+  fill: rgb(249, 169, 255);
 }
 
 #hangman {
@@ -580,7 +633,7 @@ svg {
 } */
 
 /* <-----------------------------------------------DEAD---------------------------------------> */
-#head {
+/* #head {
   fill: rgb(199, 225, 255);
 }
 
@@ -625,22 +678,43 @@ svg {
   }
 }
 
-#o-mouth,
-#right-eye,
-#left-eye,
 #right-eyebrow,
 #left-eyebrow {
   visibility: hidden;
 }
 
+#right-eye,
+#left-eye {
+  animation: close 3s forwards;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes close {
+  from {
+    transform: scaleY(1.1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
 #dead-eye-left,
 #dead-eye-right {
   visibility: visible;
+  animation: die 3.5s forwards;
 }
 
-#line-mouth {
-  visibility: visible;
-  z-index: 3;
+@keyframes die {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 #left-leg {
@@ -703,4 +777,4 @@ svg {
   to {
     transform: rotate(30deg);
   }
-}
+} */
